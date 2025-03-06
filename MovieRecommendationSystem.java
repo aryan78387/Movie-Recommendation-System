@@ -3,7 +3,7 @@ import java.awt.*;
 import java.util.List;
 import java.util.Objects;
 
-public class MovieRecommendationGUI {
+public class MovieRecommendationSystem {
     private final JFrame frame;
     private final JTextField nameField;
     private final JTextField ageField;
@@ -12,14 +12,14 @@ public class MovieRecommendationGUI {
     private final JComboBox<String> genreBox;
     private final JTextArea descriptionArea;
 
-    public MovieRecommendationGUI() {
-        frame = new JFrame("FilmGenie - Movie Recommendation");
+    public MovieRecommendationSystem() {
+        frame = new JFrame("Movie Recommendation System");
         frame.setSize(700, 650);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setBackground(new Color(20, 20, 20));
         frame.setLayout(new BorderLayout());
 
-        JLabel titleLabel = new JLabel("FilmGenie");
+        JLabel titleLabel = new JLabel("FilmFinder");
         titleLabel.setFont(new Font("Serif", Font.ITALIC | Font.BOLD, 28));
         titleLabel.setForeground(Color.WHITE);
         titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -60,7 +60,7 @@ public class MovieRecommendationGUI {
         descriptionArea.setFont(textFont);
         descriptionArea.setBorder(BorderFactory.createLineBorder(Color.WHITE, 1));
 
-        JLabel sloganLabel = createStyledLabel("Let the Genre Do the Magic!", new Font("Serif", Font.BOLD | Font.ITALIC, 22), Color.RED);
+        JLabel sloganLabel = createStyledLabel("Let the magic begin!", new Font("Serif", Font.BOLD | Font.ITALIC, 22), Color.RED);
 
         JButton submitButton = getjButton();
 
@@ -165,7 +165,7 @@ public class MovieRecommendationGUI {
         contentPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
 
-        JLabel slogan = createStyledLabel("FilmGenie Has Found These!",
+        JLabel slogan = createStyledLabel(" Here's a Movie we suggest!",
                 new Font("Serif", Font.BOLD | Font.ITALIC, 24), Color.RED);
         slogan.setAlignmentX(Component.CENTER_ALIGNMENT);
 
@@ -201,7 +201,7 @@ public class MovieRecommendationGUI {
     }
 
     public static void main(String[] args) {
-        new MovieRecommendationGUI();
+        new MovieRecommendationSystem();
     }
 }
 
@@ -397,7 +397,7 @@ class MovieFetcher {
                 }
                 break;
         }
-        return List.of("🎬 No movie found for this combination");
+        return List.of("🎬 No movie found for such combination");
     }
 
     private static String getAgeGroup(int age) {
