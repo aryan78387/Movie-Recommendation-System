@@ -155,7 +155,7 @@ public class MovieRecommendationSystem {
 
     private void showMovieRecommendations(User user) {
         JFrame movieFrame = new JFrame("Your Movie Recommendations 🎬");
-        movieFrame.setSize(400, 500);
+        movieFrame.setSize(700, 650);
         movieFrame.getContentPane().setBackground(new Color(30, 30, 30));
         movieFrame.setLayout(new BorderLayout());
 
